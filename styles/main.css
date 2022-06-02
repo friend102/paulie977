@@ -1,0 +1,379 @@
+body {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+h1, h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+h1 {
+    color: #e4eee9;
+}
+hr {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 40px 0;
+
+    border: 0;
+    background-color: #e4eee9;
+}
+
+/*Container*/
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/*intro*/
+.intro {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: url(/backraundfons.webp) center
+    no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.intro_inner {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.intro_title {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.1;
+    font: bold 3em Arial, sans-serif;
+    text-shadow: #226bbe 1px 1px 0, #cad5e2 2px 2px 0, 
+                 #214874 3px 3px 0, #cad5e2 4px 4px 0, 
+                 #275fa0 5px 5px 0;
+}
+.intro_suptitle {
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+}
+
+
+/*header*/
+.header {
+    width: 100%;
+    padding-top: 30px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+}
+/*делаем что бы лого был с лева а навигация с права*/
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #e08929;
+}
+
+/*nav*/
+.nav {
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.nav_link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+
+    transition: color .2s linear;
+}
+.nav_link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    display: none;
+
+    background-color: #da2d21;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+.nav_link:hover {
+    color: #d81d1d;
+}
+.nav_link:hover:after {
+    display: block;
+}
+
+/*section*/
+.section {
+    padding: 80px 0;
+}
+.section_header {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 50px;
+    
+    text-align: center;
+
+}
+
+.section_title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #e08929;
+    text-transform: uppercase;
+}
+.section_text {
+    color: #191b1a;
+    font-size: 25px;
+    
+}
+
+/*kompany*/
+
+.company {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    height: 315px;
+    
+    
+}
+
+.company_item {
+    width: 35%;
+    position: relative;/*для того что бі текст встал на картинку*/
+
+    background-color: #edf0f3;
+    
+}
+.company_item:hover .company_img {
+    transform: translate3d(-10px, -10px, 0);
+    /*делаем сдвиг при навидении на картинки*/
+}
+.company_item:hover .company_img img{
+    opacity: .3;  
+    /*делаем затемнение картинки*/
+}
+.company_img img {
+    transition: opacity 0.1s linear; 
+    /*делаем затемнение картинки*/
+}
+.company_img {
+    margin: 5px;
+}
+.company_img {
+    background: linear-gradient(to bottom,
+    #faf5f5, #fff);/*делаем затемнение картинки*/
+
+    transition: transform .6s linear;
+    /*делаем сдвиг при навидении на картинки*/
+}
+.company_text {
+    font-size: 20px;
+    color: #1d1b1a;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+
+    opacity: 0;
+    /*делаем текст что бы показывался 
+    при наведении*/ 
+
+    width: 100%;/*для того что бі текст встал на картинку*/
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    transform: translate3d(0, -50%, 0);
+
+    transition: opacity .1s linear;/*делаем текст что бы показывался 
+    при наведении*/
+}
+.company_item:hover .company_text{
+    opacity: 1;/*делаем текст что бы показывался 
+    при наведении*/
+}
+
+/*static*/
+.static {
+    background-color: #328ab6;
+    margin-top: 60px;
+}
+.stat {
+    display: flex;
+}
+.stat_item {
+    flex: 1 1 0;
+    padding: 70px 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    border-left: 1px solid #333;
+
+    text-align: center;
+    color: #cad5e2;
+
+} 
+.stat_item:last-child {
+    border-right: 1px solid #333 ;
+}
+
+.stat_count {
+    margin-bottom: 10px;
+
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1;
+}
+.stat_text {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+
+.services {
+    display: flex;
+    justify-content: space-between;    
+}
+
+.servises_item {
+    flex: 1 1 0;
+    padding-left: 80px;
+    padding-right: 35px;
+    position: relative;/*делаем что бы картинка 
+    была с права а текст с лева*/
+}
+.service_icon {
+    /*делаем что бы картинка 
+    была с права а текст с лева*/
+    position: absolute;
+    top: 0;
+    left: 15px;
+    z-index: 1;
+
+    width: 50px;
+    height: 50px;
+}
+.service_title {
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+/*PRICE*/
+.section_price {
+    background-color: #ddc4aa;
+}
+.columns {
+    float: left;
+    width: 33.3%;
+    padding: 5px;
+    padding-right:40px;
+}
+
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+}
+.price_info {
+    text-align: center;
+    text-decoration: none;
+    margin: -5px;
+    width: 400px;
+    list-style-type: none; /* Убираем маркеры */
+}
+.price_info li {
+    margin: 20px;
+    padding-right: 40px;
+}
+
+.price .header {
+    color: white;
+    font-size: 25px;
+}
+
+.price li {
+    border-bottom: 1px solid rgb(41, 30, 30);
+    padding: 20px;
+    text-align: center;
+}
+
+.price {
+    background-color: #eee;
+    font-size: 20px;
+}
+
+/*footer*/
+
+.footer {
+    background-color: #947f75;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer_logo {
+    font-size: 50px;
+    font-weight: 800;
+    color: #e08929;
+}
+.footer_text {
+    margin-bottom: 30px;
+
+    font-size: 15px;
+    color: #000;
+}
+.footer_social-content {
+    padding-top: 15px;
+    list-style: none;
+}
+.footer_social-link {
+    background-repeat: no-repeat;
+}
+.footer_social_vb {
+    background-image: url(/images/viber-svgrepo-com.svg);
+    font-size: 30px;
+}
+.footer_social_tg {
+    background-image: url(/images/telegram-svgrepo-com.svg);
+}
+.footer_social_wp {
+    background-image: url(/images/whatsapp-svgrepo-com.svg);
+
+}
+
+
+
