@@ -3,6 +3,7 @@ body {
     font-size: 15px;
     line-height: 1.6;
     color: #333;
+    font-family: 'Montserrat', sans-serif;
 }
 *,
 *:after,
@@ -25,6 +26,72 @@ hr {
     background-color: #e4eee9;
 }
 
+v {
+    color: #da2d21;
+}
+.icon-bar {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.icon-bar {
+    margin: 10px;
+}
+.icon-bar a b {
+    position: absolute;
+    color: black;
+    top: -27px;
+    transition: 0.4s;
+    opacity: 0;
+}
+.icon-bar a:hover b {
+    opacity: 1;
+}
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 18px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+}
+  
+.icon-bar a:hover {
+    background-color: rgb(226, 2, 2);
+    border-radius: 17px;
+    
+}
+  
+.facebook {
+    background-image: url(/images/mail-svgrepo-com.svg);
+    color: white;
+}
+
+  
+.twitter {
+    background-image: url(/images/discord-svgrepo-com111.svg);
+    width: 15px;
+    height: 15px;
+}  
+.google {
+    background-image: url(/images/whatsapp-svgrepo-com.svg);
+    color: white;
+}
+  
+.linkedin {
+    background-image: url(/images/viber-svgrepo-com.svg);  
+    color: white;
+}
+  
+.youtube {
+    background-image: url(/images/telegram-svgrepo-com.svg);
+    color: white;
+}
+  
+
 /*Container*/
 .container {
     width: 100%;
@@ -32,6 +99,7 @@ hr {
     margin: 0 auto;
 }
 /*intro*/
+
 .intro {
     width: 100%;
     height: 100vh;
@@ -72,8 +140,8 @@ hr {
 /*header*/
 .header {
     width: 100%;
-    padding-top: 30px;
-
+    
+    display: flex;
     position: absolute;
     top: 0;
     left: 0;
@@ -83,15 +151,23 @@ hr {
 }
 /*делаем что бы лого был с лева а навигация с права*/
 .header_inner {
+    width: 1200px;
+    max-width: 1200px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    background-color: #000;
+    margin: 0;
 }
 
 .header_logo {
     font-size: 30px;
     font-weight: 700;
     color: #e08929;
+    align-items: center;
+    padding-top: 60px;
 }
 
 /*nav*/
@@ -127,6 +203,7 @@ hr {
 }
 .nav_link:hover {
     color: #d81d1d;
+    
 }
 .nav_link:hover:after {
     display: block;
@@ -160,12 +237,12 @@ hr {
 /*kompany*/
 
 .company {
+    margin-left: -7px;
     margin-top: 80px;
     display: flex;
     justify-content: space-between;
     height: 315px;
-    
-    
+    background-color:#c9a988;   
 }
 
 .company_item {
@@ -223,33 +300,57 @@ hr {
     при наведении*/
 }
 
+
+/*pochem*/
+.pochem {
+    max-width: 1200px;
+    min-width: 100%;
+    height: 500px;
+    font-size: 25px;
+    margin: 0 auto;
+    margin-top: 60px;
+    text-align: center;
+    background-color: rgb(14, 13, 13);
+}
+.p2 {
+    padding-top: 30px;
+}
+.p {
+    display: block;
+    text-align: center;
+    padding: 18px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+}
+
+
+
+
+
 /*static*/
 .static {
-    background-color: #328ab6;
-    margin-top: 60px;
+    background-color: #f3ebe3;
+    height: 350px;
+    margin-bottom: 60px;
 }
+
 .stat {
     display: flex;
 }
 .stat_item {
     flex: 1 1 0;
-    padding: 70px 25px;
+    padding: 200px 25px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-
-    border-left: 1px solid #333;
-
     text-align: center;
-    color: #cad5e2;
-
+    color: #18191a;
 } 
-.stat_item:last-child {
-    border-right: 1px solid #333 ;
-}
 
 .stat_count {
     margin-bottom: 10px;
+    color: rgb(235, 8, 8);
 
     font-size: 70px;
     font-weight: 700;
@@ -261,9 +362,73 @@ hr {
 }
 
 
+/*pochemu*/
+.pochemu {
+    background-color: #000;
+    height: 700px;
+    display: block;
+    min-width: 100%;
+    height: auto;
+    
+}
+.container_pochemu .section_header .section_title {
+    padding-top: 40px;
+}
+.services_pochemu {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    max-width: 1300px;
+    height: 300px;    
+}
+#reshenie {
+    padding-left: 40px;
+}
+
+.servises_pochemu_item {
+    flex: 1 1 0;
+    padding-left: 120px;
+    padding-right: 0px;
+    position: relative;/*делаем что бы картинка 
+    была с права а текст с лева*/
+}
+.service_pochemu_icon {
+    /*делаем что бы картинка 
+    была с права а текст с лева*/
+    position: absolute;
+    top: 0;
+    left: 15px;
+    z-index: 1;
+    padding-left: 50px;
+    
+
+    width: 50px;
+    height: 50px;
+}
+.service_pochemu_title {
+    font-size: 25px;
+    color: #cad5e2;
+
+    margin-bottom: 10px;
+}/*pochemu*/
+
+/*pornfolio*/
+
+
+/*pornfolio*/
+
+
+
 .services {
     display: flex;
     justify-content: space-between;    
+}
+
+.section_suptitle {
+    color: rgb(223, 9, 9);
+    font-size: 30px;
+    font-weight: 900;
+
 }
 
 .servises_item {
@@ -290,55 +455,114 @@ hr {
     margin-bottom: 10px;
 }
 
+
+
+
+.waiting {
+    height: 1100px;    
+    padding: 30px 0 70px 0;
+}
+
+.waiting .waiting_subheader {
+    margin-top: 17px;
+    color: rgb(241, 0, 0);
+    
+    font-size: 23px;
+    font-weight: 400;
+    text-align: center;
+
+}
+.waiting .waiting_wrapper {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.waiting_wrapper .waiting_item .waiting_img {
+    width: 350px;
+    height: 400px;
+
+}
+.waiting .waiting_wrapper .waiting_item {
+    width: 350px;
+    text-align: center;
+    
+    padding-bottom: 20px;
+}
+.waiting_descr {
+    margin-top: 15px;
+    color: black;
+    font-style: 15px;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.waiting_item:hover .waiting_img {
+    transform: translate3d(0, -10px, 0);
+    /*делаем сдвиг при навидении на картинки*/
+    transition: transform .6s linear;
+}
+
+.razdel {
+    width: 100%;
+    height: 30px;
+    margin: 0 auto;
+    background-color: #0f0f0f;
+
+}
+
+
 /*PRICE*/
-.section_price {
-    background-color: #ddc4aa;
+.section_header-price {
+    background-color: #0f0f0f;
+    text-align: center;
+}
+.container_price {
+    height: 600px;
 }
 .columns {
     float: left;
-    width: 33.3%;
-    padding: 5px;
-    padding-right:40px;
+    width: 32%;
+    margin: 5px;
+   
 }
 
 .price {
     list-style-type: none;
     border: 1px solid #eee;
-    margin: 0;
-    padding: 0;
+    margin-top: 40px;
+    padding: 20px;
 }
-.price_info {
+.price-info {
+
     text-align: center;
     text-decoration: none;
-    margin: -5px;
-    width: 400px;
     list-style-type: none; /* Убираем маркеры */
+    padding-top: 60px;
 }
-.price_info li {
-    margin: 20px;
-    padding-right: 40px;
+.price-info li {
+    border-bottom: 1px solid rgb(41, 30, 30);
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
 }
 
-.price .header {
-    color: white;
-    font-size: 25px;
-}
 
 .price li {
     border-bottom: 1px solid rgb(41, 30, 30);
-    padding: 20px;
+    padding: 25px;
     text-align: center;
 }
 
 .price {
     background-color: #eee;
     font-size: 20px;
+
 }
 
 /*footer*/
 
 .footer {
-    background-color: #947f75;
+    background-color: #111111;
     width: 100%;
     height: 30vh;
     display: flex;
@@ -352,28 +576,21 @@ hr {
 }
 .footer_text {
     margin-bottom: 30px;
-
-    font-size: 15px;
-    color: #000;
+    color: rgb(248, 248, 248);
+    font-size: 15px;    
 }
+.footer_inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 .footer_social-content {
     padding-top: 15px;
     list-style: none;
 }
-.footer_social-link {
-    background-repeat: no-repeat;
+.footer_social-content-contact {
+    color: #fff;
 }
-.footer_social_vb {
-    background-image: url(/images/viber-svgrepo-com.svg);
-    font-size: 30px;
-}
-.footer_social_tg {
-    background-image: url(/images/telegram-svgrepo-com.svg);
-}
-.footer_social_wp {
-    background-image: url(/images/whatsapp-svgrepo-com.svg);
-
-}
-
 
 
